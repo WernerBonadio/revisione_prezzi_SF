@@ -51,6 +51,76 @@
     .btn.secondary{background:#fff;border-color:#cfe8ea;color:#0b5359}
     .btn svg{width:18px;height:18px}
 
+      .tools-hero {
+        background: linear-gradient(145deg,#f1fbfa 0%,#fff 70%);
+        border:1px solid #cfe8ea;
+        border-radius:20px;
+        padding:28px 24px;
+        box-shadow:0 10px 30px rgba(5,28,44,.06);
+        margin-bottom:28px;
+      }
+
+      .tools-grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        gap:18px;
+        margin-top:20px;
+      }
+
+      .tool-card {
+        background:#fff;
+        border:1px solid #d8eaf0;
+        border-radius:18px;
+        padding:22px;
+        text-align:center;
+        min-height:260px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+      }
+
+      .tool-icon {
+        width:64px;
+        height:64px;
+        border-radius:50%;
+        display:grid;
+        place-items:center;
+        margin:0 auto 14px;
+        font-size:1.8rem;
+      }
+
+      .tool-green { color:#167346; }
+      .tool-blue { color:#1f5fc4; }
+      .tool-purple { color:#7434a4; }
+
+      .icon-green { background:#e2f6e8; }
+      .icon-blue { background:#e4efff; }
+      .icon-purple { background:#f0e6fa; }
+
+      .btn.green {
+        background:#16824d;
+        color:white;
+      }
+
+      .btn.blue {
+        background:#2563c7;
+        color:white;
+      }
+
+      .btn.purple {
+        background:#7839a8;
+        color:white;
+      }
+
+      .notice-box {
+        margin-top:20px;
+        padding-top:16px;
+        border-top:1px solid #d8eaf0;
+        color:#5f6b7a;
+        font-size:.95rem;
+      }
+
+
     .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px}
     @media(min-width:780px){.grid{grid-template-columns:1.1fr .9fr}}
 
@@ -105,6 +175,79 @@
       </a>
     </header>
     
+    <!-- ChatGPT Assistant – Calcolo Revisione Prezzi (Sperimentale) -->
+    <section id="strumenti-revisione" class="tools-hero" aria-labelledby="strumenti-title">
+      <h2 id="strumenti-title">🧰 Strumenti per la Revisione Prezzi</h2>
+
+      <p>
+        Sono disponibili tre livelli di supporto per gestire indici, calcoli,
+        aggiornamenti e report in modo semplice e progressivo.
+      </p>
+
+      <div class="tools-grid">
+
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon icon-green">▦</div>
+            <h3 class="tool-green">1. Tabella Excel</h3>
+            <p>
+              Versione scaricabile della tabella per il calcolo della revisione prezzi
+              per servizi e forniture.
+            </p>
+          </div>
+
+          <a class="btn green" href="1161093_2025-CalcoloRevPrezzi.zip" target="_blank" rel="noopener" download>
+            ⬇ Scarica Tabella (.zip)
+          </a>
+        </article>
+
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon icon-blue">💬</div>
+            <h3 class="tool-blue">2. Assistente ChatGPT</h3>
+            <p>
+              Assistente sperimentale per aiutare a interpretare i criteri
+              e simulare il calcolo.
+            </p>
+          </div>
+
+          <a
+            class="btn blue"
+            href="https://chatgpt.com/g/g-68518daa342c8191b3a7a55204722009-calcolo-revisione-prezzi-sf-servizi-e-forniture"
+            target="_blank"
+            rel="noopener nofollow">
+            💬 Apri Assistente
+          </a>
+        </article>
+
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon icon-purple">🚀</div>
+            <h3 class="tool-purple">3. App beta avanzata</h3>
+            <p>
+              Applicazione beta per gestire la revisione prezzi: indici ISTAT,
+              calcoli, aggiornamenti, monitoraggio e report PDF.
+              In elaborazione anche la versione per lavori con TOL.
+            </p>
+          </div>
+
+          <a
+            class="btn purple"
+            href="https://istat-index-bot-full-test-662928293009.europe-west4.run.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            🚀 Apri App Beta
+          </a>
+        </article>
+
+      </div>
+
+      <p class="notice-box">
+        🛡️ Nota: gli strumenti hanno funzione di supporto. La verifica finale dei dati,
+        dei criteri applicati e della conformità normativa rimane in capo all’utente.
+      </p>
+    </section>
+
     <section class="hero" aria-labelledby="titolo">
       <h2 id="titolo">Tabella per il calcolo della Revisione Prezzi (Servizi e Forniture) · 2025</h2>
 
@@ -121,22 +264,20 @@
         che registrano <b>individualmente</b> una variazione superiore al <b>5%</b>,
         come consentito dall'art 13, c.1, lett. <b>e)</b> dell’Allegato II.2-bis.
       </p>
+
       <p>
         Il controllo finale dell’applicazione dei criteri e della coerenza dei dati
         rimane in capo alla stazione appaltante.<br>
         L’utilizzo dello strumento è a proprio rischio e non si assume alcuna responsabilità
         per eventuali errori o omissioni.
       </p>
-    
+
       <div class="cta">
         <a class="btn primary" href="1161093_2025-CalcoloRevPrezzi.zip" target="_blank" rel="noopener" download>
-          <!-- download icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4A1 1 0 1 1 8.707 10.293L11 12.586V4a1 1 0 0 1 1-1ZM5 18a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
           Scarica Tabella (.zip)
         </a>
+
         <a class="btn secondary" href="1161085_2025---ISTRUZIONI-PER-UTILIZZO-TABELLA-REVISIONE-PREZZI.pdf" target="_blank" rel="noopener">
-          <!-- doc icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h7.5a2 2 0 0 0 2-2V8.5L12.5 2H7Zm0 2h5v4.5a1 1 0 0 0 1 1H16v10.5a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5V4.5A.5.5 0 0 1 7 4Zm9 5h-3.5a.5.5 0 0 1-.5-.5V5l4 4Z"/></svg>
           Leggi Istruzioni (.pdf)
         </a>
       </div>
@@ -146,7 +287,8 @@
       <article class="card">
         <h3>Contesto</h3>
         <p>
-          La tabella è pensata per facilitare il lavoro delle stazioni appaltanti nella determinazione dei corrispettivi aggiornati, tenendo conto delle variazioni dei costi e dei parametri economici.
+          La tabella è pensata per facilitare il lavoro delle stazioni appaltanti nella determinazione dei corrispettivi aggiornati,
+          tenendo conto delle variazioni dei costi e dei parametri economici.
           È particolarmente utile per enti pubblici, amministrazioni locali e tecnici che gestiscono procedure di gara e contratti in corso d'esecuzione.
         </p>
         <div class="meta" aria-label="Metadati">
@@ -161,81 +303,13 @@
         <p>Le informazioni derivano dalla news ACP/AOV del <strong>08.04.2025</strong>.</p>
         <ul class="list">
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M4 5a2 2 0 0 1 2-2h5.586a2 2 0 0 1 1.414.586l4.414 4.414A2 2 0 0 1 18 9.414V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5Zm10 0H6v14h10V9h-2a2 2 0 0 1-2-2V5Z"/></svg>
-            <a href="https://contratti-pubblici.provincia.bz.it/it/news/comunicazione-agli-utenti-tabella-per-il-calcolo-della-revisione-prezzi-servizi-e-forniture" target="_blank" rel="noopener">Comunicazione agli utenti – Revisione prezzi SF</a>
+            <a href="https://contratti-pubblici.provincia.bz.it/it/news/comunicazione-agli-utenti-tabella-per-il-calcolo-della-revisione-prezzi-servizi-e-forniture" target="_blank" rel="noopener">
+              Comunicazione agli utenti – Revisione prezzi SF
+            </a>
           </li>
         </ul>
       </aside>
     </div>
-
-    <!-- ChatGPT Assistant – Calcolo Revisione Prezzi (Sperimentale) -->
-    <section id="strumenti-revisione" aria-labelledby="strumenti-title" style="margin-top:2rem;">
-      <div style="
-        border-radius:16px; padding:20px; background:#f4faf9;
-        border:1px solid #d7efe8; max-width:920px; margin:0 auto;">
-        
-        <h2 id="strumenti-title" style="margin:0 0 .5rem 0; font-size:1.35rem;">
-          Strumenti per la Revisione Prezzi
-        </h2>
-
-        <p style="margin:.25rem 0 1rem 0; line-height:1.5;">
-          Sono disponibili tre livelli di supporto: la tabella ufficiale in formato Excel,
-          un assistente ChatGPT sperimentale e una versione beta avanzata dell’app per gestire
-          indici, calcoli, aggiornamenti e report.
-        </p>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:16px;">
-
-          <article style="background:#fff; border:1px solid #d7efe8; border-radius:14px; padding:16px;">
-            <h3 style="margin:0 0 .5rem 0;">1. Tabella Excel</h3>
-            <p style="margin:0 0 1rem 0;">
-              Versione scaricabile della tabella per il calcolo della revisione prezzi
-              per servizi e forniture.
-            </p>
-            <a class="btn primary" href="1161093_2025-CalcoloRevPrezzi.zip" target="_blank" rel="noopener" download>
-              Scarica Tabella (.zip)
-            </a>
-          </article>
-
-          <article style="background:#fff; border:1px solid #d7efe8; border-radius:14px; padding:16px;">
-            <h3 style="margin:0 0 .5rem 0;">2. Assistente ChatGPT</h3>
-            <p style="margin:0 0 1rem 0;">
-              Assistente sperimentale per aiutare a interpretare i criteri e simulare il calcolo.
-            </p>
-            <a
-              class="btn primary"
-              href="https://chatgpt.com/g/g-68518daa342c8191b3a7a55204722009-calcolo-revisione-prezzi-sf-servizi-e-forniture"
-              target="_blank"
-              rel="noopener nofollow">
-              💬 Apri Assistente
-            </a>
-          </article>
-
-          <article style="background:#fff; border:1px solid #d7efe8; border-radius:14px; padding:16px;">
-            <h3 style="margin:0 0 .5rem 0;">3. App beta avanzata</h3>
-            <p style="margin:0 0 1rem 0;">
-              Applicazione beta per gestire la revisione prezzi: indici ISTAT, calcoli,
-              aggiornamenti, monitoraggio e report PDF.
-              In elaborazione anche la versione per lavori con TOL.
-            </p>
-            <a
-              class="btn primary"
-              href="https://istat-index-bot-full-test-662928293009.europe-west4.run.app/"
-              target="_blank"
-              rel="noopener noreferrer">
-              🚀 Apri App Beta
-            </a>
-          </article>
-
-        </div>
-
-        <p style="margin:1rem 0 0 0; font-size:.9rem; color:#5b6b72;">
-          Nota: gli strumenti hanno funzione di supporto. La verifica finale dei dati,
-          dei criteri applicati e della conformità normativa rimane in capo all’utente.
-        </p>
-      </div>
-    </section>
-
 
     <footer>
       <div class="footer-grid">
@@ -244,7 +318,7 @@
           <br />
         </p>
         <div>
-          <a class="badge" href="#titolo">Torna su</a>
+          <a class="badge" href="#strumenti-revisione">Torna su</a>
         </div>
       </div>
     </footer>
