@@ -177,7 +177,10 @@
     
     <!-- ChatGPT Assistant – Calcolo Revisione Prezzi (Sperimentale) -->
     <section id="strumenti-revisione" class="tools-hero" aria-labelledby="strumenti-title">
-      <h2 id="strumenti-title">🧰 Strumenti per la Revisione Prezzi</h2>
+      <h2 id="strumenti-title">🧰 Strumenti per la Revisione Prezzi Servizi e Forniture</h2>
+
+      <a class="btn secondary" href="https://wernerbonadio.github.io/revisione_prezzi_L/" target="_blank" rel="noopener">
+        Vai alla pagina Revisione Prezzi Lavori  </a>     
 
       <p>
         Sono disponibili tre livelli di supporto per gestire indici, calcoli,
@@ -210,7 +213,8 @@
               e simulare il calcolo.
             </p>
           </div>
-
+          <a href="#" onclick="openDatasetPopup(); return false;">
+            Vedi dataset di esempio da inserire nel bot      </a>
           <a
             class="btn blue"
             href="https://chatgpt.com/g/g-68518daa342c8191b3a7a55204722009-calcolo-revisione-prezzi-sf-servizi-e-forniture"
@@ -328,5 +332,40 @@
     // Aggiorna anno nel footer e abilita download con tastiera
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+<div id="datasetPopup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:9999;">
+  <div style="background:white; max-width:700px; margin:8vh auto; padding:24px; border-radius:12px;">
+    <h2>Dataset di esempio</h2>
+
+    <pre style="white-space:pre-wrap; background:#f5f5f5; padding:16px; border-radius:8px;">
+CPV: 30192000
+Importo: 100000
+Numero indici: 2
+
+Indice 1:
+Valore aggiudicazione: 104,5
+Valore revisione: 109,8
+Peso: 60%
+
+Indice 2:
+Valore aggiudicazione: 102,0
+Valore revisione: 106,4
+Peso: 40%
+    </pre>
+
+    <button onclick="closeDatasetPopup()">Chiudi</button>
+  </div>
+</div>
+
+<script>
+  function openDatasetPopup() {
+    document.getElementById("datasetPopup").style.display = "block";
+  }
+
+  function closeDatasetPopup() {
+    document.getElementById("datasetPopup").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
