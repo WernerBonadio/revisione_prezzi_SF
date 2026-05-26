@@ -121,6 +121,19 @@
       }
 
 
+      .example-btn{
+        display:inline-block;
+        margin:14px auto 8px auto;
+        font-size:.95rem;
+        padding:0;
+        border:none;
+        background:transparent;
+        color:#007c89;
+        font-weight:500;
+        cursor:pointer;
+        line-height:1.4;
+      }
+
     .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px}
     @media(min-width:780px){.grid{grid-template-columns:1.1fr .9fr}}
 
@@ -212,16 +225,15 @@
               Assistente sperimentale per aiutare a interpretare i criteri
               e simulare il calcolo.
             </p>
-          </div>
-          <a href="#" onclick="openDatasetPopup(); return false;">
-            Vedi dataset di esempio da inserire nel bot      </a>
-          <a
-            class="btn blue"
-            href="https://chatgpt.com/g/g-68518daa342c8191b3a7a55204722009-calcolo-revisione-prezzi-sf-servizi-e-forniture"
-            target="_blank"
-            rel="noopener nofollow">
-            💬 Apri Assistente
-          </a>
+            
+            <a class="example-btn" href="#" onclick="openDatasetPopup(); return false;">
+              Vedi dataset di esempio da inserire nel bot
+            </a>
+            
+            <a class="btn blue"
+              href="https://chatgpt.com/g/g-68518daa342c8191b3a7a55204722009-calcolo-revisione-prezzi-sf-servizi-e-forniture"
+              target="_blank" rel="noopener nofollow">
+              💬 Apri Assistente      </a>
         </article>
 
         <article class="tool-card">
