@@ -168,6 +168,12 @@
     @media(min-width:720px){.footer-grid{grid-template-columns:1fr auto}}
     .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;background:#eef9fa;border:1px solid #cfe8ea;color:#0b5359;font-weight:600}
 
+    /* Temporarily hide lower content; remove this block to restore it. */
+    #strumenti-revisione > .platform-banner ~ *,
+    #strumenti-revisione ~ :not(footer),
+    .footer-grid > :not(p),
+    #datasetPopup{display:none !important}
+
     /* Dark mode */
     @media (prefers-color-scheme: dark){
       body{background:var(--bg);color:#d8e0ea}
